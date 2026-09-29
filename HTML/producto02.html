@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar SmartWatch 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f0f5;
+            padding: 40px 20px;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #111111;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contenedor-compra {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .contenedor-compra {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .imagen-producto img {
+            width: 100%;
+            border-radius: 8px;
+            background-color: #e9ecef;
+        }
+
+        .detalles-producto h1 {
+            font-size: 28px;
+            color: #111;
+            margin-bottom: 10px;
+        }
+
+        .precio {
+            font-size: 24px;
+            color: #28a745;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .descripcion {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        form label {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        form input, form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .btn-comprar {
+            width: 100%;
+            background-color: #111111;
+            color: #ffffff;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn-comprar:hover {
+            background-color: #333333;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="btn-volver">&larr; Volver al catálogo</a>
+
+    <main class="contenedor-compra">
+        <div class="imagen-producto">
+            <img src="SmartWatch 2.jpg" alt="SmartWatch Modelo 02">
+        </div>
+
+        <div class="detalles-producto">
+            <h1>SmartWatch 2</h1>
+            <p class="precio">$199.99</p>
+            <p class="descripcion">
+                SmartWatch deportivo con monitor de ritmo cardíaco, GPS integrado y pantalla AMOLED de alta resolución. Resistencia al agua hasta 50 metros.
+            </p>
+
+            <form action="#" method="POST" onsubmit="alert('¡Gracias por tu compra!'); return false;">
+                <label for="color">Color:</label>
+                <select id="color" name="color">
+                    <option value="negro">Negro</option>
+                    <option value="plata">Plata</option>
+                    <option value="azul">Azul</option>
+                </select>
+
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" value="1" min="1" max="10">
+
+                <button type="submit" class="btn-comprar">Comprar Ahora</button>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>
